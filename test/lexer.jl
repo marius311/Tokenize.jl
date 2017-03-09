@@ -254,6 +254,7 @@ end
                     "local",
                     "if",
                     "immutable",
+                    "struct",
                     "import",
                     "importall",
                     "macro",
@@ -311,4 +312,3 @@ end
     l = tokenize("abc")
     Base.Test.@inferred Tokenize.Lexers.next_token(l)
 end
-

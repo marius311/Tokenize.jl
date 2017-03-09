@@ -11,7 +11,7 @@ import ..Tokens: Token, Kind, TokenError, UNICODE_OPS, EMPTY_TOKEN
 
 import ..Tokens: FUNCTION, ABSTRACT, IDENTIFIER, BAREMODULE, BEGIN, BITSTYPE, BREAK, CATCH, CONST, CONTINUE,
                  DO, ELSE, ELSEIF, END, EXPORT, FALSE, FINALLY, FOR, FUNCTION, GLOBAL, LET, LOCAL, IF, IMMUTABLE,
-                 IMPORT, IMPORTALL, MACRO, MODULE, QUOTE, RETURN, TRUE, TRY, TYPE, TYPEALIAS, USING, WHILE, ISA, IN
+                 IMPORT, IMPORTALL, MACRO, MODULE, QUOTE, RETURN, STRUCT, TRUE, TRY, TYPE, TYPEALIAS, USING, WHILE, ISA, IN
 
 
 export tokenize
@@ -944,6 +944,8 @@ function lex_identifier(l, c)
         return tryread(l, ('u', 'o', 't', 'e'), QUOTE)
     elseif c == 'r'
         return tryread(l, ('e', 't', 'u', 'r', 'n'), RETURN)
+    elseif c == 's'
+        return tryread(l, ('t', 'r', 'u', 'c', 't'), STRUCT)
     elseif c == 't'
         c = readchar(l)
         if c == 'r'

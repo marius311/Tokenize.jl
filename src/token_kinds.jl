@@ -21,7 +21,7 @@
         end_2arg_kw,
         BEGIN, QUOTE,
         begin_3arg_kw,
-            BAREMODULE, DO, FOR, FUNCTION, IMMUTABLE, LET, MACRO, MODULE, TYPE, WHILE,
+            BAREMODULE, DO, FOR, FUNCTION, IMMUTABLE, STRUCT, LET, MACRO, MODULE, TYPE, WHILE,
         end_3arg_kw,
         IF, ELSEIF, ELSE,
         TRY, CATCH, FINALLY,
